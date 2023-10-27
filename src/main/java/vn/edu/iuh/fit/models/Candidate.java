@@ -39,6 +39,11 @@ public class Candidate {
         this.experiences = experiences;
     }
 
+    public Candidate(String fullName, String phone) {
+        this.fullName = fullName;
+        this.phone = phone;
+    }
+
     public long getId() {
         return id;
     }

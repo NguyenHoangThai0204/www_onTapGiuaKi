@@ -21,6 +21,7 @@
             <th>Name</th>
             <th></th>
             <th></th>
+            <th></th>
         </tr>
         <% for( Candidate candidate : candidateList ) {%>
             <tr>
@@ -28,6 +29,7 @@
                 <td><%= candidate.getFullName()%></td>
                 <td><a href="home?action=viewDetail&id=<%=candidate.getId()%>">View</a></td>
                 <td><a href="home?action=delete&id=<%=candidate.getId()%>">Delete</a></td>
+                <td><a href="home?action=update&id=<%=candidate.getId()%>">Update</a></td>
             </tr>
         <%}%>
     </table>

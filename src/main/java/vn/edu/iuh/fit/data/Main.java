@@ -25,6 +25,7 @@ public class Main {
 //        List<Experience> experiences1 = List.of(ex1,ex2,ex3);
 //        can1.setExperiences(experiences1);
 //        repository.insertCan(can1);
+//
 //        Candidate can2 = new Candidate("Thai 2", "456132", "saet2@gmail.com",null);
 //        Experience ex4 = new Experience(can2,"A","Nghi", LocalDate.now(), LocalDate.now(), Roles.ADMINISTRATION);
 //        Experience ex5 = new Experience(can2,"A","Nghi", LocalDate.now(), LocalDate.now(), Roles.ADMINISTRATION);
@@ -32,6 +33,7 @@ public class Main {
 //        List<Experience> experiences2 = List.of(ex4,ex5,ex6);
 //        can2.setExperiences(experiences2);
 //        repository.insertCan(can2);
+//
 //        Candidate can3 = new Candidate("Thai 3", "456132", "saet3@gmail.com",null);
 //        Experience ex7 = new Experience(can3,"A","Nghi", LocalDate.now(), LocalDate.now(), Roles.MANAGER);
 //        Experience ex8 = new Experience(can3,"A","Nghi", LocalDate.now(), LocalDate.now(), Roles.MANAGER);
@@ -49,9 +51,14 @@ public class Main {
 //            System.out.println(can);
 //        }
         // Câu 6
-        List<Candidate> list = repository.getAllCanHaveEmail();
-        for (Candidate can : list){
-            System.out.println(can);
-        }
+//        List<Candidate> list = repository.getAllCanHaveEmail();
+//        for (Candidate can : list){
+//            System.out.println(can);
+//        }
+            Candidate c = new Candidate("Thai Hoang","8974654");
+            repository.update(c,1);
+            for ( Candidate ca : repository.getAllCan() ){
+                System.out.println(ca);
+            }
     }
 }

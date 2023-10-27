@@ -39,7 +39,6 @@ public class CandidateRepository {
             transaction.rollback();
         }
     }
-
     public List<Candidate> getAllCan(){
         Transaction transaction = null;
         try {

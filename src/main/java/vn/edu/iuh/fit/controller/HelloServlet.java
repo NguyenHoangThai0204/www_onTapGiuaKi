@@ -41,11 +41,12 @@ public class HelloServlet extends HttpServlet {
             request.getRequestDispatcher("/listCan.jsp")
                     .forward(request, response);
         }
-        else if (action.equals("report1")){
-            String role = request.getParameter("roleId");
-            request.setAttribute("candidateReport1",
-                    candidateRepository.getAllCanByRole(Roles.valueOf(role)));
-            request.getRequestDispatcher("/report1.jsp")
+        else if (action.equals("update")){
+//            long id = Long.parseLong(request.getParameter("id"));
+//            candidateRepository.delete(id);
+//            List<Candidate> canL = candidateRepository.getAllCan();
+//            request.setAttribute("listCan", canL);
+            request.getRequestDispatcher("/update.jsp")
                     .forward(request, response);
         }
     }
